@@ -1,2 +1,5 @@
 ## Burger's Equation
-![Burgers](burgers.PNG)
+![Burger's](burgers.PNG)
+
+## Laplace's Equation
+![Laplace's](laplace.PNG)
