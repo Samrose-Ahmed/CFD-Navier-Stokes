@@ -2,4 +2,4 @@ Solve the Advection equation using the first-order upwind method, Lax-Wendroff m
 
 ## Question 1
 The boundary conditions are:
-(q1_bcs.png)
+![hello](q1_bcs.png)
