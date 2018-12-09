@@ -1,0 +1,1 @@
+Solve the Advection equation using the first-order upwind method, Lax-Wendroff method, and Crank Nicolson method (using both second-order central difference and first-order backward dif-ference approximations for spatial derivative).
