@@ -21,7 +21,6 @@ B = (alpha*dt)/(2*dx^2);% Beta, 0.5*courant no.
 k=1; %iteration
 BC=zeros(n,1);          % initialize BC vector
 Tinterior = zeros(n,1); % intialize
-[X,Y]=meshgrid(x,y);    % for plotting contours
 %% BCs
 % set up matrices and make Block TDMs
 B1=makeMat(nx-2,-B,1+4*B,-B);
@@ -70,7 +69,7 @@ while t<tmax
     T(:,1)=Tleft;
     T(1,:)=Tbot;
     if mod(k,50)==0
-        h=contour(X,Y,T,'Fill','on');colorbar;
+        h=contour(x,y,T,'Fill','on');colorbar;
         title(sprintf('time=%0.5f hr',t));
         drawnow
     end
@@ -84,7 +83,7 @@ T=zeros(nx);
 T(2:end-1,2:end-1)=reshape(Tinterior,[nx-2,nx-2])';
 T(:,1)=Tleft;
 T(1,:)=Tbot;
-contour(X,Y,T,'Fill','on');colorbar;
+contour(x,y,,T,'Fill','on');colorbar;
 title(sprintf('time=%0.5f hr',t));
 %% functions
 function [Output] = makeblkdiag(n,A,B,C)
